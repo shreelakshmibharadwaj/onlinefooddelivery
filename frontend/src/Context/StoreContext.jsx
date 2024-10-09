@@ -4,8 +4,12 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
+    const url="https://onlinefooddelivery-64ul.onrender.com"
     const [cartItems,setCartItems] = useState({});
     const [ordersData,setOrdersData] = useState({});
+    const [token, setToken]=useState("")
+    const currency="$";
+    const deliveryCharge=50;
     
     const addToCart = (itemId) =>{
         if(!cartItems[itemId])
